@@ -39,13 +39,6 @@
 }
 
 
-
-
-
-/* Make a loading animation of 2 second that transforms the blur into 0 */
-
-
-
 /*Animation + Corps général */
 body {
     animation-fill-mode: forwards;
@@ -63,21 +56,14 @@ body {
 .home_page{
     animation: loading 2s;
     background-color: #000091;
-    /* Rounded corners */
     border-radius: 25px;
-    /* Padding */
     padding: 20px;
-    /* Margin */
     margin: 20px;
-    /* Text color */
     color: white;
-    /* Font */
     font-family: 'Marianne', Arial;
-    /* Font size */
     font-size: 20px;
 }
 
-/* On h1 at home_page, make it centered and with a bigger font size */
 .home_page h1{
     text-align: center;
     font-size: 40px;
@@ -86,8 +72,6 @@ body {
 .home_page a{
     color: white;
 }
-
-
 
 /* Navbar pour toutes les pages sauf index.html */
 
@@ -119,7 +103,6 @@ body {
     display: none;
 }
 
-/* On "navbar" class, resize the image to fit dynamically with the text */
 .navbar img {
     width: 15%;
     height: 15%;
@@ -196,8 +179,6 @@ dropdown_cv:hover .dropbtn-cv {
 
 /* Fonctions usuelles */
 
-
-/* Make the nav bar responsive */
 @media screen and (max-width: 600px) {
 
     .nav_bar a,
