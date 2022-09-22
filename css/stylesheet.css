@@ -1,14 +1,195 @@
-/* Make a quick loading animation */
-@keyframes loading {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 100% 0;
-  }
+/* Language: css */
+/* Path: css\stylesheet.css */
+
+/* Import all fa library */
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+
+/* Import des fonts */
+
+@font-face {
+    font-family: 'Marianne';
+    src: url('../font/Marianne-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Marianne';
+    src: url('../font/Marianne-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Marianne';
+    src: url('../font/Marianne-Regular_Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: 'Marianne';
+    src: url('../font/Marianne-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
 }
 
 
 
-/* Language: css */
-/* Path: css\stylesheet.css */
+
+
+/* Make a loading animation of 2 second that transforms the blur into 0 */
+
+
+
+/*Animation + Corps général */
+body {
+    animation: loading 2s;
+    animation-fill-mode: forwards;
+    background-color: white;
+    color: black;
+    font-family: 'Marianne', Arial;
+}
+
+.loading {
+    animation: loading 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes loading {
+    0% {
+        filter: blur(5px);
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        filter: blur(0px);
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+/* Navbar pour toutes les pages sauf index.html */
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.navbar a:hover {
+    background-color: #030336;
+    color: white;
+}
+
+.navbar .icon {
+    display: none;
+}
+
+
+
+/* Pour le bouton CV de la Navbar */
+
+.nav_bar {
+    overflow: hidden;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav_bar a {
+    float: left;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown_cv {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown_cv .dropbtn-cv {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.nav_bar a:hover,
+dropdown_cv:hover .dropbtn-cv {
+    background-color: red;
+}
+
+.dropdown_cv-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown_cv-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown_cv-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown_cv:hover .dropdown_cv-content {
+    display: block;
+}
+
+
+
+/* Fonctions usuelles */
+
+
+/* Make the nav bar responsive */
+@media screen and (max-width: 600px) {
+
+    .nav_bar a,
+    .dropdown_cv .dropbtn-cv {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown_cv-content a {
+        float: none;
+    }
+
+    .dropdown_cv:hover .dropdown_cv-content {
+        display: block;
+    }
+}
