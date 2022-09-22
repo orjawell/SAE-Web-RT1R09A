@@ -119,6 +119,13 @@ body {
     display: none;
 }
 
+/* On "navbar" class, resize the image to fit dynamically with the text */
+.navbar img {
+    width: 15%;
+    height: 15%;
+    margin-left: 0px;
+    margin-top: 0px;
+}
 
 
 /* Pour le bouton CV de la Navbar */
