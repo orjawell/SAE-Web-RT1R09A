@@ -48,31 +48,46 @@
 
 /*Animation + Corps général */
 body {
-    animation: loading 2s;
     animation-fill-mode: forwards;
     background-color: white;
     color: black;
     font-family: 'Marianne', Arial;
 }
 
-.loading {
+
+
+.home{
+    background-color: black;
+}
+
+.home_page{
     animation: loading 2s;
-    animation-fill-mode: forwards;
+    background-color: #000091;
+    /* Rounded corners */
+    border-radius: 25px;
+    /* Padding */
+    padding: 20px;
+    /* Margin */
+    margin: 20px;
+    /* Text color */
+    color: white;
+    /* Font */
+    font-family: 'Marianne', Arial;
+    /* Font size */
+    font-size: 20px;
 }
 
-@keyframes loading {
-    0% {
-        filter: blur(5px);
-        opacity: 0;
-        transform: translateX(100%);
-    }
-
-    100% {
-        filter: blur(0px);
-        opacity: 1;
-        transform: translateX(0%);
-    }
+/* On h1 at home_page, make it centered and with a bigger font size */
+.home_page h1{
+    text-align: center;
+    font-size: 40px;
 }
+
+.home_page a{
+    color: white;
+}
+
+
 
 /* Navbar pour toutes les pages sauf index.html */
 
@@ -163,7 +178,7 @@ dropdown_cv:hover .dropbtn-cv {
 }
 
 .dropdown_cv-content a:hover {
-    background-color: #ddd;
+    background-color: #030336;
 }
 
 .dropdown_cv:hover .dropdown_cv-content {
@@ -191,5 +206,19 @@ dropdown_cv:hover .dropbtn-cv {
 
     .dropdown_cv:hover .dropdown_cv-content {
         display: block;
+    }
+}
+
+@keyframes loading {
+    0% {
+        filter: blur(5px);
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        filter: blur(0px);
+        opacity: 1;
+        transform: translateX(0%);
     }
 }
