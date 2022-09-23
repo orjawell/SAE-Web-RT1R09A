@@ -138,11 +138,8 @@
         background-color: #333;
         overflow: hidden;
         border-radius: 20px;
-        /* Make the navbar responsive */
-        position: relative;
-        top: 30;
-        width: 99%;
-        z-index: 1;
+        margin: 5px;
+        padding: 3px;
     }
 
     .navbar a {
@@ -168,7 +165,7 @@
     .nav_bar {
         overflow: hidden;
         background-color: black;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Marianne', Arial, sans-serif;
     }
 
     .nav_bar a {
