@@ -99,6 +99,37 @@
         text-align: center;
     }
 
+    /* Reduce the space between a h1 and a h4 tag */
+    .home_page h1 + h4 {
+        margin-top: -25px;
+    }
+
+
+    /* Under the div class "home_page" */
+    /* Under the div class "Main_nav_bar" */
+    /* Center the table with id "table_nav_bar" */
+
+    .home_page .Main_nav_bar{
+        display: flex;
+        justify-content: center;
+    }
+
+    .home_page .Main_nav_bar a{
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    p#note {
+        font-size: 10px;
+        font-weight: normal;
+        text-align: center;
+        font-style: italic;
+    }
+
 
 
     /* Navbar pour toutes les pages sauf index.html */
@@ -106,8 +137,12 @@
     .navbar {
         background-color: #333;
         overflow: hidden;
-        /* Make rounded corner */
         border-radius: 20px;
+        /* Make the navbar responsive */
+        position: relative;
+        top: 30;
+        width: 99%;
+        z-index: 1;
     }
 
     .navbar a {
@@ -118,7 +153,6 @@
         padding: 14px 16px;
         text-decoration: none;
     }
-
     .navbar a.active {
         background-color: #4CAF50;
         color: white;
@@ -128,18 +162,6 @@
         background-color: #030336;
         color: white;
     }
-
-    .navbar .icon {
-        display: none;
-    }
-
-    .navbar img {
-        width: 15%;
-        height: 15%;
-        margin-left: 0px;
-        margin-top: 0px;
-    }
-
 
     /* Pour le bouton CV de la Navbar */
 
