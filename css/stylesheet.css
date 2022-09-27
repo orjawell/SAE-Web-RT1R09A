@@ -111,7 +111,10 @@
         display: flex;
         justify-content: center;
     }
+#hobbies{
 
+    display: flex;
+}
     .home_page .Main_nav_bar a{
         color: white;
         text-decoration: none;
@@ -127,6 +130,16 @@
         text-align: center;
         font-style: italic;
     }
+
+
+    p#secret {
+        font-size: 5px;
+        color:rgba(255, 255, 255, 0.30);
+        font-weight: normal;
+        text-align: center;
+        font-style: italic;
+    }
+
 
 /* Center all text under the div class "main_nav_bar" */
     .home_page .Main_nav_bar a {
@@ -146,6 +159,63 @@
         animation: underline 0.5s;
         animation-fill-mode: forwards;
     }
+
+
+/* End of Home Page */
+
+/* Hobbies */
+
+.intro{
+    width: 50%;
+    height: 50%;
+    background-color: rgba(255, 255, 255, 0.75);
+    color: black;
+    opacity: 0.95; 
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin: 5px;
+    padding: 5px;
+}
+
+
+.read{
+    align-items: flex-end;
+    width: 50%;
+    height: 50%;
+    background-color: rgba(255, 255, 255, 0.75);
+    margin-right: auto;
+    color: black;
+    opacity: 0.95;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin: 5px;
+    padding: 5px;
+}
+
+
+
+    /* p span id "big_bald" */
+    p span#big_bald {
+        font-size: 40px;
+        font-weight: bold;
+        font-style: normal;
+        align-items: flex-end;
+    }
+
+        /* p span id "big_bald" */
+        p span#note {
+            font-size: 10px;
+            font-weight: normal;
+            font-style: italic;
+        }
 
     /* Animation for the underline */
     @keyframes underline {
@@ -238,7 +308,7 @@
         background-color: #f9f9f9;
         min-width: 160px;
         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-        z-index: 1;
+        z-index: 50;
     }
 
     .dropdown_cv-content a {
