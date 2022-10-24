@@ -34,7 +34,6 @@
         font-style: italic;
     }
 
-
     /*Animation + Corps général */
 
     body {
@@ -132,6 +131,11 @@
         display: flex;
         justify-content: center;
     }
+
+    #courbevoie {   
+        justify-content: center;
+    }
+
 
     #planes {
         display: flex;
