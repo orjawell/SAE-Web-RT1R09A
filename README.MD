@@ -1,12 +1,7 @@
-# WELCOME
+# RT1-R09A
 
-Were no strangers to love
-You know the rules and so do I
-A full commitment's what I'm thinking of
-You wouldn't get this from any other guy
-I just wanna tell you how I'm feeling
-Gotta make you understand
+Code source de la SAÉ RT1-R09A
 
-Never gonna give you up
-Never gonna make you cry
-Never gonna tell a lie and hurt you
+Codée par Akram Shal, RT1 FA
+
+Visualisation disponible sur : http://sae.ashal.velizy-rt.o2switch.site/
