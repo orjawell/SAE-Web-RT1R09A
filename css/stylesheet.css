@@ -73,7 +73,7 @@
         .nav_bar a,
         .dropdown_cv .dropbtn-cv {
             float: none;
-            display: block;
+            display: block;             /* L'animation est liée au dropmenu du bouton CV */
             text-align: left;
         }
 
@@ -92,11 +92,21 @@
             opacity: 0;
             transform: translateX(100%);
         }
-
+                                            /* On fait une petite animation pour que la div centrale apparaisse de gauche à droite */
         100% {
             filter: blur(0px);
             opacity: 1;
             transform: translateX(0%);
+        }
+    }
+
+    @keyframes underline {
+        0% {
+            border-bottom: 0px solid white;
+        }
+
+        100% {
+            border-bottom: 2px solid white;
         }
     }
 
@@ -121,43 +131,75 @@
         font-family: 'Marianne', Arial, serif;
         font-size: 20px;
         font-weight: normal;
-    }
-
-    .home_page h1 {
-        font-size: 50px;
-        font-weight: bold;
         text-align: center;
     }
 
-    .home_page h2 {
+    h1 {
+        font-size: 50px;
+        font-weight: bold;
+        text-align: inherit; /*On  force le positionnement du texte  en fonction du text-align de la div mère...*/
+    }
+
+    h2 {
         font-size: 30px;
         font-weight: normal;
         text-align: center;
         font-style: italic;
     }
 
-    .home_page h4 {
+    h4 {
         font-size: 25px;
         font-weight: normal;
-        text-align: center;
+        text-align: inherit;
         font-style: italic;
     }
 
-    .home_page h3 {
+    h5 {
+        font-size: 20px;
         font-weight: normal;
-        text-align: center;
+        text-align: inherit;
         font-style: italic;
+    }
+
+    h3 {
+        font-weight: normal;
+        text-align: inherit;
+        font-style: italic;
+    }
+
+    a{
+        text-align: inherit;
     }
 
     .home_page p {
         font-size: 20px;
         font-weight: normal;
-        text-align: center;
+        text-align: inherit;
     }
+
+    .big_bald {
+        font-size: 40px;
+        font-weight: bold;
+        font-style: normal;
+        align-items: flex-end;
+    }
+
+
+    .note {
+        font-size: 10px;
+        font-weight: normal;
+        font-style: italic;
+    }
+
+
 
     li{
         font-size: inherit; /*On utilise la fonction inherit pour que les li héritent de la taille de la font du parent */
-        text-align: center; /*On centre le contenu */
+        text-align: inherit; /*On  force le positionnement de la liste en fonction du text-align de la div mère...*/
+    }
+
+    img {
+        border-radius: 8px;
     }
 
     /* On réduit la place  */
@@ -169,8 +211,8 @@
     /* Under the div class "home_page" */
 
     .home_page .Main_nav_bar {
-        display: flex;
-        justify-content: center;
+        display: flex; /*On utilise flex pour que les éléments soient alignés horizontalement */
+        justify-content: center; /*On centre les éléments */
     }
 
     #hobbies {
@@ -201,6 +243,7 @@
     }
 
     p#note {
+        /*Ici, on vient créer uniquement une règle pour les petites notes "fun"*/
         font-size: 10px;
         font-weight: normal;
         text-align: center;
@@ -208,18 +251,13 @@
     }
 
 
-    /* Make all videos with rounded corners */
+    /* On donne des bords ronds à la vidéo */
     video {
         border-radius: 25px;
     }
 
 
-    /* Center all text under the div class "main_nav_bar" */
-    .home_page .Main_nav_bar a {
-        text-align: center;
-    }
-
-    /* Under the div, when a tag is overed, make a light animation */
+    /* Ici, on vient créer une animation pour la page principale pour que quand on survole un élement cliquable, une petite animation apparaît en dessous */
     /* The animation is a slight underline appearing under the text by the bottom */
     .home_page .Main_nav_bar a:hover {
         animation: underline 0.5s;
@@ -232,31 +270,27 @@
         animation: underline 0.5s;
         animation-fill-mode: forwards;
     }
-
-
-    /* End of Home Page */
-
     /* Hobbies */
 
     .flex-right {
+        /* Pour forcer le fait que les éléments soient alignés à droite */
         display: flex;
         justify-content: center;
-        flex-direction: column;
+        flex-direction: column; /*On place en mode column pour forcer la disposition de haut en bas */
         align-items: stretch;
         width: 50%;
         height: 50%;
     }
 
     .intro {
-
         background-color: rgba(255, 255, 255, 0.75);
         color: black;
         opacity: 0.95;
         border-radius: 25px;
         display: flex;
-        flex-direction: column;
+        flex-direction: column; 
         align-items: center;
-        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /*Pour faire une petite ombre sous la div */
         position: relative;
         margin: 5px;
         padding: 5px;
@@ -318,12 +352,37 @@
         padding: 5px;
     }
 
-    /* Below the read class, put the video class */
+    /* Partie pour books.html */
+    .flex-left {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: stretch;
+        width: 50%;
+        height: 50%;
+    }
+    
+    .films {
+        background-color: #CEC0DE;
+        margin-right: auto;
+        color: black;
+        opacity: 0.95;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        position: relative;
+        margin: 5px;
+        padding: 5px;
+    }
+
     .video {
         width: 70%;
+        /* Ici, on superpose deux divs l'une sur l'autre, tout en appliquant des propriétés spécifiques à cette dernière */
+        /* On veux qu'elle puisse faire au maximum 70% de la largeur de la div mère et 50% de sa hauteur */
         height: 50%;
         background-color: #94089E;
-        color: white;
         margin-left: auto;
         color: black;
         opacity: 0.95;
@@ -337,30 +396,72 @@
         padding: 5px;
     }
 
-    .transition_without_border {
-        display: none;
-        justify-content: center;
-        flex-direction: column;
-        align-items: stretch;
-        width: 50%;
+    #interstellar_img {
+        width: 70%;
+        /* Ici, on superpose deux divs l'une sur l'autre, tout en appliquant des propriétés spécifiques à cette dernière */
+        /* On veux qu'elle puisse faire au maximum 70% de la largeur de la div mère et 50% de sa hauteur */
         height: 50%;
+        background-color: #17161e;
+        color: white;
+        margin-left: auto;
+        opacity: 0.95;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        position: relative;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    #interstellar {
+        background-color: #49525b;
+        color: white;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        position: relative;
+        margin: 5px;
+        padding: 5px;
 
     }
 
-
-    .big_bald {
-        font-size: 40px;
-        font-weight: bold;
-        font-style: normal;
-        align-items: flex-end;
+    #dune_img {
+        width: 70%;
+        /* Ici, on superpose deux divs l'une sur l'autre, tout en appliquant des propriétés spécifiques à cette dernière */
+        /* On veux qu'elle puisse faire au maximum 70% de la largeur de la div mère et 50% de sa hauteur */
+        height: 50%;
+        background-color: #8cb1b9;
+        color: white;
+        margin-left: auto;
+        opacity: 0.95;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        position: relative;
+        margin: 5px;
+        padding: 5px;
     }
 
+    #dune {
+        background-color: #6c583d;
+        color: white;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        position: relative;
+        margin: 5px;
+        padding: 5px;
 
-    .note {
-        font-size: 10px;
-        font-weight: normal;
-        font-style: italic;
     }
+
 
 
     /* End of Hobbies */
@@ -481,21 +582,10 @@
         margin: 0.5%;
     }
 
-    /* For all elements in interest class, reduce the space between them */
-
-
     /* Animation for the underline */
-    @keyframes underline {
-        0% {
-            border-bottom: 0px solid white;
-        }
 
-        100% {
-            border-bottom: 2px solid white;
-        }
-    }
 
-    /* Make the text on the footer darker */
+    /* Pour le footer, on force une couleur noire */
     footer {
         color: rgba(0, 0, 0, 0.75);
         text-align: center;
@@ -550,6 +640,8 @@
         padding: 14px 16px;
         text-decoration: none;
     }
+
+/* On vient créer une navbar dynamique déroulante pour l'onglet CV */
 
     .dropdown_cv {
         float: left;
